@@ -58,7 +58,7 @@ class MotionDetectorInstantaneous():
         while 1:
             
             curframe = cv.QueryFrame(self.capture)
-            face_detector = face.CascadedDetector(cascade_fn="D:\e-yantra\opencv\sources\data\haarcascades\haarcascade_frontalface_alt2.xml")
+            face_detector = face.CascadedDetector(cascade_fn="haarcascade_frontalface_alt2.xml")
             curframe_face = np.asarray(curframe[:,:])
             curframe_face = np.array(curframe_face, dtype=np.uint8)
             curframe_face = cv2.resize(curframe_face,(700,480))
